@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Safe Step</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f2f6ff;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: #2b5cff;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin: auto;
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background: #2b5cff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d3fbf;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Safe Step</h1>
+    <div class="box">
+        <p>Status: <b id="status">Safe</b></p>
+        <button onclick="checkStatus()">Check Safety</button>
+    </div>
+
+    <script>
+        function checkStatus() {
+            let states = ["Safe", "Warning", "Possible Risk"];
+            let random = Math.floor(Math.random() * states.length);
+            document.getElementById("status").innerText = states[random];
+        }
+    </script>
+
+</body>
+</html>
